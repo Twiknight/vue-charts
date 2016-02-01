@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <h1>{{ msg }}</h1>
+    <p>
+      {{version}}
+    </p>
   </div>
 </template>
 
@@ -13,6 +16,11 @@ export default {
       // preserves its current state and we are modifying
       // its initial state.
       msg: 'Hello Vue!'
+    }
+  },
+  computed:{
+    version : function(){
+      return `d3 version : ${d3.version}`
     }
   }
 }

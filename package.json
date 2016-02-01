@@ -18,6 +18,7 @@
     "babel-runtime": "^5.8.0",
     "cross-env": "^1.0.6",
     "css-loader": "^0.23.0",
+    "d3": "^3.5.14",
     "file-loader": "^0.8.4",
     "json-loader": "^0.5.4",
     "url-loader": "^0.5.7",
