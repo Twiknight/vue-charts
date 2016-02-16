@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import axis from "../components/axis/HorizontalAxis.vue"
+import axis from "../components/axis/TopAxis.vue"
 import bars from "../components/bars/HorizontalBarSet.vue"
 
   export default {
@@ -25,7 +25,8 @@ import bars from "../components/bars/HorizontalBarSet.vue"
             lineSpace:0,
             axisTickLength:5,
             step:0,
-            tickColor:"black"
+            tickColor:"black",
+            axisColor:"black"
           }
         }
       },
@@ -41,6 +42,7 @@ import bars from "../components/bars/HorizontalBarSet.vue"
           scale:opts.valueRange,
           tickLength:opts.axisTickLength,
           tickColor:opts.tickColor,
+          axisColor:opts.axisColor,
           step:opts.step,
           x:opts.labelWidth,
           y:opts.lineHeight

@@ -57,8 +57,11 @@
         })
       },
       location:function(){
-        const settings = this.settings
-          return `translate(${settings.x},${settings.y})`
+        const x = this.settings.x || 0;
+        const y = this.settings.y || 0;
+        if(!!x || !!y){
+          return `translate(${x},${y})`
+        }
       }
     }
   }

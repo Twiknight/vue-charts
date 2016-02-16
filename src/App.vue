@@ -37,7 +37,8 @@ export default {
         lineHeight:30,
         axisTickLength:8,
         step:20,
-        tickColor:"black"
+        tickColor:"black",
+        axisColor:"black"
       }
     }
   },

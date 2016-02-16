@@ -4,7 +4,7 @@
       <line class='tick' x2="0" :y2="-settings.tickLength" :stroke="settings.tickColor"></line>
       <text text-anchor="middle" x="0" :y="-settings.tickLength*1.5">{{tick.value}}</text>
     </g>
-    <path class="domain" :d="line" fill="none"></path>
+    <path class="domain" :d="line" fill="none" :stroke="settings.axisColor"></path>
   </g>
 </template>
 
@@ -36,7 +36,6 @@
               value : x
             });
           }
-          console.log(ticks)
           return ticks;
         }else{
           return settings.scale.map(function(value){
@@ -60,8 +59,8 @@
       location:function(){
         const x = this.settings.x
         const y = this.settings.y
-        return `translate(${x},${y})`
         if(!!x && !!y){
+          return `translate(${x},${y})`
         }
       }
     }
