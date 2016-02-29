@@ -1,16 +1,22 @@
 <template>
   <g class="bars" :transform="location">
-    <text v-for="d in data" :x="0" :y="d.y" dy="0.35em">{{d.name}}</text>
-    <rect
-      v-for="d in data"
-      :x="d.barX"
-      :y="d.barY"
-      :width="d.width"
-      :height="d.height"
-      :fill="d.fill">
-    </rect>
+    <g class="bar" v-for="d in data" :transform="d.location">
+      <text  :x="0" :y="settings.lineHeight*0.5" dy="0.35em">{{d.name}}</text>
+      <rect
+        :x="settings.labelWidth"
+        :y="0"
+        :width="d.width"
+        :height="settings.lineHeight"
+        :fill="d.fill">
+      </rect>
+    </g>
   </g>
 </template>
+
+<style lang="stylus" scoped>
+  rect:hover
+    filter: drop-shadow( 3px 3px 2px rgba(0,0,0,.7) ) 
+</style>
 
 <script>
 /**
@@ -46,9 +52,7 @@
           let d = {
             name:value.name,
             value:value.value,
-            y:y(idx+0.5),
-            barY:y(idx),
-            barX:settings.labelWidth,
+            location:`translate(0,${y(idx)})`,
             height:settings.lineHeight,
             width:scale(Math.max(value.value,0)),
             fill:settings.colorFunc(value.value)
