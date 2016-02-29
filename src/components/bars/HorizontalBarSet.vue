@@ -13,11 +13,6 @@
   </g>
 </template>
 
-<style lang="stylus" scoped>
-  rect:hover
-    filter: drop-shadow( 3px 3px 2px rgba(0,0,0,.7) ) 
-</style>
-
 <script>
 /**
 * series :[
