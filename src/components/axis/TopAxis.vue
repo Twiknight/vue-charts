@@ -1,10 +1,10 @@
 <template>
   <g class="axis" :transform="location">
+    <line class="domain" :stroke="settings.color" :x2="settings.width" y2="0"></line>
     <g v-for="tick in ticks" :transform="tick.location">
-      <line class='tick' x2="0" :y2="-settings.tickLength" :stroke="settings.tickColor"></line>
+      <line class='tick' x2="0" :y2="-settings.tickLength" :stroke="settings.color"></line>
       <text text-anchor="middle" x="0" :y="-settings.tickLength*1.5">{{tick.value}}</text>
     </g>
-    <path class="domain" :d="line" fill="none" :stroke="settings.axisColor"></path>
   </g>
 </template>
 
@@ -46,15 +46,6 @@
             return t
           })
         }
-      },
-      line:function(){
-        const settings = this.settings
-        const scale = d3.scale.linear()
-          .range([0,settings.width])
-          .domain(settings.scale)
-        const range = settings.scale
-        const height = settings.tickLength
-        return `M${scale(range[0])},${-height}V0H${scale(range[1])}V${-height}`
       },
       location:function(){
         const x = this.settings.x

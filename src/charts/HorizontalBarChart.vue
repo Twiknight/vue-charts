@@ -41,8 +41,7 @@ import bars from "../components/bars/HorizontalBarSet.vue"
           width:opts.paneWidth,
           scale:opts.valueRange,
           tickLength:opts.axisTickLength,
-          tickColor:opts.tickColor,
-          axisColor:opts.axisColor,
+          color:opts.tickColor,
           step:opts.step,
           x:opts.labelWidth,
           y:opts.lineHeight
