@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import axis from "../components/axis/TopAxis.vue"
+import {TopAxis as axis} from "../components/axis"
 import bars from "../components/bars/HorizontalBarSet.vue"
 
   export default {
