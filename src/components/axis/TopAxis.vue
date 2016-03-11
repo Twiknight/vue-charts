@@ -1,6 +1,6 @@
 <template>
   <g class="axis" :transform="location">
-    <line class="domain" :stroke="settings.color" :x2="settings.width" y2="0"></line>
+    <line class="domain" :stroke="settings.color" :x2="settings.length" y2="0"></line>
     <g v-for="tick in ticks" :transform="tick.location">
       <line class='tick' x2="0" :y2="-settings.tickLength" :stroke="settings.color"></line>
       <text text-anchor="middle" x="0" :y="-settings.tickLength*1.5">{{tick.value}}</text>
@@ -15,7 +15,7 @@
       ticks:function(){
         const settings = this.settings;
         const scale = d3.scale.linear()
-          .range([0,settings.width])
+          .range([0,settings.length])
           .domain(settings.scale);
 
         if(settings.ticks){
