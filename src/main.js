@@ -1,13 +1,7 @@
-import Vue from 'vue'
-import App from './App.vue'
-import {
-  d3
-}
-from 'd3'
+import Axis from './components/axis'
+import Bars from './components/bars'
 
-new Vue({
-  el: 'body',
-  components: {
-    App
-  }
-})
+export {
+  Axis,
+  Bars
+}
