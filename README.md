@@ -1,18 +1,3 @@
-# vue-charts
+#Discarded
 
-> Vue svg Charts
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+This repo is discarded, the project of svg toolkit moved to [vue-bricks](https://github.com/Twiknight/vue-bricks)
